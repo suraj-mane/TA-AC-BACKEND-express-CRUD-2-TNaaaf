@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-info">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/book">Book</a>
+        <a href="/book/new">
+          <button type="button" class="btn btn-dark">New</button>
+        </a>
+      </div>  
+    </nav>
+    <div class="container-xxl">
+      <h1 class="display-1">Book List</h1>
+    </div>
+    <div>
+      <h2><%= data.title%></h2>
+      <h3><%= data.author%></h3>
+      <span class="tags"><%= data.tags%></span>
+      <p class="des"><%= data.description%></p>
+      <p><%= data.likes%></p>
+      <a href="/book/<%= data.id%>/likes">
+        <button type="button" class="btn btn-success">Like</button>
+      </a>
+      <br>
+      <br>
+      <a href="/book/<%= data.id%>/edit">
+        <button type="button" class="btn btn-primary">Edit</button>
+      </a>
+      <a href="/book/<%= data.id%>/delete">
+        <button type="button" class="btn btn-danger">Delete</button>
+      </a>
+    </div>
+    <div class="comments">
+      <form action="/book/<%= data.id%>/comment" method="POST">
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label"></label>
+          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="comment" name="content">
+        </div>
+        <button type="submit" class="btn btn-success">Add Comments</button>
+      </form>
+    </div>
+    <div>
+      <p><% data.Comment.forEach(com => {%>
+        <p><%= com.content%></p>
+        <p><%= com.likes%></p>
+        <a href="/comment/<%= com.id%>/likes">
+          <button type="button" class="btn btn-success">Like</button>
+        </a>
+        <br>
+        <br>
+        <a href="/comment/<%= com.id%>/edit">
+          <button type="button" class="btn btn-primary">Edit</button>
+        </a>
+        <a href="/comment/<%= com.id%>/delete">
+          <button type="button" class="btn btn-danger">Delete</button>
+        </a>
+      <%})%>
+      </p>
+    </div>
+  </body>
+</html>

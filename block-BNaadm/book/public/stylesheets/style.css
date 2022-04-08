@@ -1,0 +1,38 @@
+body {
+  padding: 10px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+.container-xxl{
+  text-align: center;
+}
+.nform {
+  border: 1px solid rgb(121, 121, 121);
+  padding: 10px ;
+  width: 600px;
+  margin: 0 auto;
+}
+.display-6 {
+  color: cadetblue;
+}
+.btn-danger {
+  margin-left: 1rem;
+}
+.des {
+  font-size: 20px;
+  width: 900px;
+}
+.tags {
+  background-color: bisque;
+  padding: 5px;
+}
+.comments {
+  width: 600px;
+}
+.edit-comments{
+  width: 600px;
+  margin: 0 auto;
+}
