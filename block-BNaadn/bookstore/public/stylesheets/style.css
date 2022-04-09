@@ -1,0 +1,26 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+.navbar {
+  padding: 3rem;
+}
+.c-title {
+  text-align: center;
+}
+.a-form {
+  width: 600px;
+  margin: 2rem auto;
+  border: 2px solid rgb(67, 65, 65);
+  padding: 2rem;
+  text-align: center;
+}
+.a-form input {
+  margin: 1rem;
+}
+.a-title {
+  text-decoration: none;
+}
